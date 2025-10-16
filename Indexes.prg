@@ -12,7 +12,7 @@ dbfile := Directory( '*.dbf' )
 for x := 1 to len( dbfile )
  ? dbfile[ x,1 ]
  fn = dbfile[x,1]
- fwrite( fhandle,  "DBF => " + FN + CRLF  )
+ fwrite( fhandle,  FN + CRLF  )
  use &fn index &fn new
  for y=1 to OrdCount()
       fwrite( fhandle, padr( y, 15 ) + padr( ordname(y ), 20 ) + ;
